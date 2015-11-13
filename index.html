@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript"></script>
+    <title>FBLA</title>
+  </head>
+  <body>
+
+
+    <script type = "text/javascript">
+
+
+    var count = 2;
+    function validate() {
+    var un = document.myform.username.value;
+    var pw = document.myform.pword.value;
+    var valid = false;
+
+    var unArray = ["Austin"];
+    var pwArray = ["Password1"];
+
+    for (var i=0; i <unArray.length; i++) {
+    if ((un == unArray[i]) && (pw == pwArray[i])) {
+    valid = true;
+    break;
+    }
+    }
+
+    if (valid) {
+    alert ("Login was successful");
+    $("td").dblclick(function () {
+      var OriginalContent = $(this).text();
+       $(this).addClass("cellEditing");
+        $(this).html("<input type='text' value='" + OriginalContent + "' />");
+         $(this).children().first().focus();
+          $(this).children().first().keypress(function (e) { if (e.which == 13) { var newContent = $(this).val();
+             $(this).parent().text(newContent); $(this).parent().removeClass("cellEditing");
+            } });
+             $(this).children().first().blur(function(){ $(this).parent().text(OriginalContent);
+                $(this).parent().removeClass("cellEditing");
+              });
+        });
+    return false;
+    }
+
+    var t = " tries";
+    if (count == 1) {t = " try"}
+
+    if (count >= 1) {
+    alert ("Invalid username and/or password.  You have " + count + t + " left.");
+    document.myform.username.value = "";
+    document.myform.pword.value = "";
+    setTimeout("document.myform.username.focus()", 25);
+    setTimeout("document.myform.username.select()", 25);
+    count --;
+    }
+
+    else {
+    alert ("Still incorrect! You have no more tries left!");
+    document.myform.username.value = "No more tries allowed!";
+    document.myform.pword.value = "";
+    document.myform.username.disabled = true;
+    document.myform.pword.disabled = true;
+    return false;
+    }
+
+    }
+    </script>
+
+    <form name = "myform">
+    <p>ENTER USER NAME <input type="text" name="username"> ENTER PASSWORD <input type="password" name="pword">
+    <input type="button" value="Check In" name="Submit" onclick= "validate()">
+    </p>
+
+    </form>
+
+
+
+<div class="table">
+<table border="1"><div contenteditable="true">
+  <tr><th>First Name</th><th>Last Name</th><th>School</th><th>State</th><th>Email</th><th>Grade</th><th>Status</th><th>Amount</th></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+  <tr><td>Austin</td><td>Mahan</td><td>Mtn. Range</td><td>CO</td><td>email</td><td>2015</td><td>active</td><td>amount</td></tr>
+</div>
+</table>
+
+</div>
+<div class="box">
+  <form>
+
+  <br>
+
+</form>
+<br>
+
+<br>
+<br>
+<br>
+<div class="button">
+  <p>Add student</p>
+</div>
+</div>
+
+
+
+  </body>
+</html>
